@@ -20,7 +20,7 @@ function SubContent() {
   return (
     <SubContentWrapper>
       <Title>스마트폰을 통해 스캔 해주세요.</Title>
-      <QRImage id="qr" src="/images/qrcode.png" />
+      <QRImage src="/images/qrcode.png" />
       <QRDesripttion>
         스마트폰 기본 카메라 앱에서 아래의 QR을 비춘 후 뜨는 링크를 눌러주세요
       </QRDesripttion>
@@ -29,6 +29,12 @@ function SubContent() {
         value="QR코드 이미지 다운받기"
         onClick={downloadImage}
       />
+      AR기능은 현재 아래의 기기에서만 정상 작동 합니다.
+      <br />
+      <br />
+      iPhone: iOS 12이상
+      <br />
+      Android: 8.0+ 이상 ARCore 1.9 지원기기
     </SubContentWrapper>
   );
 }
@@ -36,14 +42,15 @@ function SubContent() {
 export default SubContent;
 
 const SubContentWrapper = styled.div`
-  width: 300px;
-  margin: 20px auto;
+  width: 400px;
+  margin: 100px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 20px;
   height: 440px;
+  text-align: center;
 `;
 
 const Title = styled.h2`
@@ -67,5 +74,5 @@ const DownloadButton = styled.input`
   cursor: pointer;
   border-radius: 4px;
   padding: 8px;
-  font-size: 8px;
+  font-size: 14px;
 `;
