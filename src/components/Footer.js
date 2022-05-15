@@ -12,7 +12,7 @@ function Footer() {
 export default Footer;
 
 const FooterWrapper = styled.footer`
-  margin-top: 200px;
+  margin-top: 60px;
   padding-top: 15px;
   height: 70px;
   border-top: 1px solid rgb(196, 196, 196);

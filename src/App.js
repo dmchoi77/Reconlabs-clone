@@ -19,7 +19,6 @@ export default App;
 
 const GlobalStyle = styled.div`
   max-width: 1920px;
-  max-height: 1280px;
   min-width: 768px;
-  min-height: 1024px;
+  height: clamp(1024px, 43vh, 1280px);
 `;
