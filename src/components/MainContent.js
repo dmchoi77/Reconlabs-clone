@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "@emotion/styled";
+import Viewer from "./Viewer";
 
 function Content() {
-  const [modal, setModal] = useState(false);
-
   function copyUrlToClipBoard() {
     // 클립보드 복사를 위해 Clipboard API 사용
     // 참고 https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText
@@ -12,21 +11,9 @@ function Content() {
     });
   }
 
-  function clickModal() {
-    setModal((value) => !value);
-  }
-
   return (
     <ContentWrapper>
-      {modal ? (
-        <Modal onClick={clickModal}>
-          <ModalContent src="/images/manual.png" />
-        </Modal>
-      ) : null}
-      <ViewerWrapper>
-        <ModalIcon onClick={clickModal}>ℹ️</ModalIcon>
-        <Viewer>Viewer</Viewer>
-      </ViewerWrapper>
+      <Viewer />
       <CopyButton
         type="button"
         value="코드 복사하기"
@@ -48,27 +35,6 @@ const ContentWrapper = styled.div`
   background-position: center center;
   background-repeat: no-repeat;
 `;
-const ViewerWrapper = styled.div`
-  margin-top: 20px;
-  width: 720px;
-  height: 440px;
-`;
-
-const Viewer = styled.div`
-  width: 100%;
-  height: 380px;
-  // display: block;
-  position: relative;
-  overflow: hidden;
-  background-color: #ffff;
-  border-radius: 4px;
-`;
-
-const ModalIcon = styled.div`
-  display: flex;
-  flex-direction: row-reverse;
-  cursor: pointer;
-`;
 
 const CopyButton = styled.input`
   background-color: #0071ff;
@@ -79,17 +45,4 @@ const CopyButton = styled.input`
   padding: 8px;
   font-size: 14px;
   margin-bottom: 35px;
-`;
-
-const Modal = styled.div`
-  background-color: rgba(0, 0, 0, 0.7);
-  position: fixed;
-  inset: 0px;
-  z-index: 50;
-  cursor: pointer;
-`;
-
-const ModalContent = styled.img`
-  display: flex;
-  margin: 400px auto;
 `;
