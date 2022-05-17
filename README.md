@@ -95,7 +95,7 @@ JavaScript, React, Emotion.js(styled-components), view3D
     
     버튼 클릭 시, 현재 브라우저의 URL이 클립보드에 저장됩니다.
 
-    클립보드에 저장 기능을 구현하는 방법에 대해 알아보니 대표적으로 execCommand 과 Clipboard API를 사용하는 방법이 있다는 것을 알게 되었습니다. 
+    클립보드에 저장 기능을 구현하는 방법에 대해 알아보니 대표적으로 [execCommand](https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand) 과 [Clipboard API](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText)를 사용하는 방법이 있다는 것을 알게 되었습니다. 
   
     그런데 execCommand는 Deprecated 돼서 Clipboard API를 사용했습니다.
 
