@@ -52,6 +52,7 @@ const ViewerContent = styled.div`
   overflow: hidden;
   background-color: #ffff;
   border-radius: 4px;
+  box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.2);
 `;
 
 const ModalIcon = styled.div`

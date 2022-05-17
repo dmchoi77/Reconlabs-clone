@@ -2,9 +2,8 @@ import React from "react";
 import { Global, css } from "@emotion/react";
 
 const defaultStyle = css`
-  max-width: 1920px;
-  min-width: 768px;
-  height: clamp(1024px, 43vh, 1280px);
+  height: clamp(1024px, 50%, 1280px);
+  width: clamp(768px, 50%, 1920px);
 `;
 
 function GlobalStyle() {
