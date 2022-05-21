@@ -26,28 +26,7 @@ JavaScript, React, Emotion.js(styled-components), view3D
 
     <br>
 
-  * ## 반응형 페이지(최소: 768 * 1024, 최대: 1920 * 1280)
-
-    ```javascript
-    import React from "react";
-    import { Global, css } from "@emotion/react";
-
-    const defaultStyle = css`
-      height: clamp(1024px, 50%, 1280px);
-      width: clamp(768px, 50%, 1920px);
-    `;
-
-    function GlobalStyle() {
-      return <Global styles={defaultStyle} />;
-    }
-
-    export default GlobalStyle;
-    ```
-    
-    전역으로 적용되도록 Global 컴포넌트를 사용하였으며, 반응형 페이지를 간결하게 구현할 수 있는 css의 clamp 함수를 사용하였습니다.
-
-  <br>
-
+  * ## 반응형 페이지
 
   * ## 3D모델 뷰어
 
