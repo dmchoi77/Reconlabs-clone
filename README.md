@@ -26,28 +26,7 @@ JavaScript, React, Emotion.js(styled-components), view3D
 
     <br>
 
-  * ## 반응형 페이지(최소: 768 * 1024, 최대: 1920 * 1280)
-
-    ```javascript
-    import React from "react";
-    import { Global, css } from "@emotion/react";
-
-    const defaultStyle = css`
-      height: clamp(1024px, 50%, 1280px);
-      width: clamp(768px, 50%, 1920px);
-    `;
-
-    function GlobalStyle() {
-      return <Global styles={defaultStyle} />;
-    }
-
-    export default GlobalStyle;
-    ```
-    
-    전역으로 적용되도록 Global 컴포넌트를 사용하였으며, 반응형 페이지를 간결하게 구현할 수 있는 css의 clamp 함수를 사용하였습니다.
-
-  <br>
-
+  * ## 반응형 페이지
 
   * ## 3D모델 뷰어
 
@@ -95,7 +74,7 @@ JavaScript, React, Emotion.js(styled-components), view3D
     
     버튼 클릭 시, 현재 브라우저의 URL이 클립보드에 저장됩니다.
 
-    클립보드에 저장 기능을 구현하는 방법에 대해 알아보니 대표적으로 execCommand 과 Clipboard API를 사용하는 방법이 있다는 것을 알게 되었습니다. 
+    클립보드에 저장 기능을 구현하는 방법에 대해 알아보니 대표적으로 [execCommand](https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand) 과 [Clipboard API](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText)를 사용하는 방법이 있다는 것을 알게 되었습니다. 
   
     그런데 execCommand는 Deprecated 돼서 Clipboard API를 사용했습니다.
 
