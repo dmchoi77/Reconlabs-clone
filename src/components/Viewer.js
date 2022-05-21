@@ -25,10 +25,14 @@ function Viewer() {
     <ViewerWrapper>
       <ModalIcon onClick={clickModal}>ℹ️</ModalIcon>
       <ViewerContent>
-        <div id="wrapper-el" className="view3d-wrapper view3d-square">
+        <div
+          id="wrapper-el"
+          className="view3d-wrapper view3d-square"
+          style={{ minWidth: "720px" }}
+        >
           <canvas
             className="view3d-canvas"
-            style={{ width: "720px", height: "380px" }}
+            style={{ minWidth: "720px", height: "380px" }}
           />
         </div>
       </ViewerContent>
@@ -41,7 +45,7 @@ export default Viewer;
 
 const ViewerWrapper = styled.div`
   margin-top: 20px;
-  width: 720px;
+  min-width: 720px;
   height: 440px;
 `;
 

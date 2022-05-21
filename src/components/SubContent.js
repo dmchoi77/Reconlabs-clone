@@ -44,7 +44,6 @@ function SubContent() {
 export default SubContent;
 
 const SubContentWrapper = styled.div`
-  width: 400px;
   margin: 100px auto;
   display: flex;
   flex-direction: column;
