@@ -27,6 +27,22 @@ JavaScript, React, Emotion.js(styled-components), view3D
     <br>
 
   * ## 반응형 페이지
+    최소: 768 * 1024 최대: 1920 * 1280
+    ```javascript
+    const defaultStyle = css`
+      body {
+        min-width: 768px;
+        max-width: 1920px;
+
+        min-height: 1024px;
+        max-height: 1280px;
+      }
+    `;
+
+    function GlobalStyle() {
+      return <Global styles={defaultStyle} />;
+    }
+    ```
 
   * ## 3D모델 뷰어
 
