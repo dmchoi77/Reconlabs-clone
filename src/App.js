@@ -1,8 +1,8 @@
-import GlobalStyle from "./Common/GlobalStyle";
-import Header from "./Common/Header";
-import MainContent from "./Components/MainContent";
-import Footer from "./Common/Footer";
-import SubContent from "./Components/SubContent";
+import GlobalStyle from "./common/GlobalStyle";
+import Header from "./common/Header";
+import MainContent from "./components/MainContent";
+import Footer from "./common/Footer";
+import SubContent from "./components/SubContent";
 
 function App() {
   return (
